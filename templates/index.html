@@ -1,0 +1,18 @@
+<h1>Agregar un Amigo</h1>
+<form action="/create_friend" method="POST">
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname">
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname">
+    <label for="occ" >Occupation:</label>
+    <input type="text" name="occ">
+    <input type="submit" value="Add Friend">
+</form> 
+
+<h1>Todos mis amigos</h1>
+{% for one_friend in all_friends %}
+    <p>First Name: {{one_friend.nombre}}</p>
+    <p>Last Name: {{one_friend.apellido}}</p>
+    <p>Occupation: {{one_friend.ocupacion}}</p>
+    <hr>
+{% endfor %}
